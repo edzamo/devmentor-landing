@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevMentor | Mentoría técnica para estudiantes de software</title>
+    <meta
+      name="description"
+      content="Mentoría 1 a 1 para estudiantes universitarios de software: resolución de bugs y laboratorios, acompañamiento en proyectos de tesis y talleres prácticos con un ingeniero senior de la industria."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Formulario estático solo para que Netlify detecte los campos en build. No se muestra. -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
