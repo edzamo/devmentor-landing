@@ -9,7 +9,7 @@ function decode(value: string): string {
 
 export const site = {
   mentorName: 'Edwin Zamora',
-  whatsappMessage: 'Hola, vengo desde la landing de mentoría y quiero agendar una consulta exprés.',
+  whatsappMessage: 'Hola, vengo desde la devmentor-ec de mentoría y quiero agendar una consulta exprés.',
   discordInvite: 'https://discord.gg/TODO',
   portfolioUrl: 'https://edwin-zamora-ec.netlify.app/',
 }
