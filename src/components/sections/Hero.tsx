@@ -1,5 +1,5 @@
 import { CheckCircle2 } from 'lucide-react'
-import { whatsappHref } from '../../data/site'
+import { openWhatsapp } from '../../data/site'
 import { Button } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
 
@@ -27,9 +27,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.3} className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button href={whatsappHref()} target="_blank" rel="noreferrer">
-            Escríbeme por WhatsApp
-          </Button>
+          <Button onClick={() => openWhatsapp()}>Escríbeme por WhatsApp</Button>
           <Button href="#servicios" variant="secondary">
             Agenda tu consulta exprés
           </Button>

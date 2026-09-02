@@ -1,6 +1,6 @@
 import { CheckCircle2 } from 'lucide-react'
 import { pricingPlans } from '../../data/content'
-import { whatsappHref } from '../../data/site'
+import { openWhatsapp } from '../../data/site'
 import { Button } from '../ui/Button'
 import { GlassCard } from '../ui/GlassCard'
 import { Reveal } from '../ui/Reveal'
@@ -40,9 +40,7 @@ export function Pricing() {
                   ))}
                 </ul>
                 <Button
-                  href={whatsappHref(`Hola, me interesa el plan "${plan.name}" de la mentoría.`)}
-                  target="_blank"
-                  rel="noreferrer"
+                  onClick={() => openWhatsapp(`Hola, me interesa el plan "${plan.name}" de la mentoría.`)}
                   variant={plan.highlighted ? 'primary' : 'secondary'}
                   className="mt-6 justify-center"
                 >

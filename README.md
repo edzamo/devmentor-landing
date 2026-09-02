@@ -33,11 +33,12 @@ Vite + React 19 + TypeScript + Tailwind CSS 4 + Framer Motion + lucide-react —
 
 ## Antes de publicar
 
-Editar `src/data/site.ts` con los datos reales (son placeholders, no credenciales):
+Editar `src/data/site.ts` con los datos reales pendientes (son placeholders, no credenciales):
 
-- `whatsappNumber`: número real en formato internacional sin `+`.
 - `email`: correo de contacto real.
 - `discordInvite`: enlace real del servidor, si aplica.
+
+Ya configurados: `whatsappNumber` (Ecuador, +593983821443) y `portfolioUrl` (https://edwin-zamora-ec.netlify.app/), enlazado desde el navbar, la sección "Sobre el mentor" y el footer — el portafolio completo vive en ese sitio aparte, esta landing se mantiene enfocada solo en el servicio de mentoría.
 
 El copy de las secciones (dolores, servicios, precios, FAQ) vive en `src/data/content.ts`.
 

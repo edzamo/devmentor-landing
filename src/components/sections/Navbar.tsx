@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '../../data/content'
-import { whatsappHref } from '../../data/site'
+import { openWhatsapp, site } from '../../data/site'
 import { Button } from '../ui/Button'
 
 export function Navbar() {
@@ -20,10 +20,18 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href={site.portfolioUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link text-sm text-[var(--color-text)]"
+          >
+            Portafolio
+          </a>
         </nav>
 
         <div className="hidden md:block">
-          <Button href={whatsappHref()} target="_blank" rel="noreferrer" className="text-sm">
+          <Button onClick={() => openWhatsapp()} className="text-sm">
             Escríbeme por WhatsApp
           </Button>
         </div>
@@ -51,7 +59,22 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href={whatsappHref()} target="_blank" rel="noreferrer" className="justify-center text-sm">
+            <a
+              href={site.portfolioUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-[var(--color-text)]"
+              onClick={() => setOpen(false)}
+            >
+              Portafolio
+            </a>
+            <Button
+              onClick={() => {
+                setOpen(false)
+                openWhatsapp()
+              }}
+              className="justify-center text-sm"
+            >
               Escríbeme por WhatsApp
             </Button>
           </nav>

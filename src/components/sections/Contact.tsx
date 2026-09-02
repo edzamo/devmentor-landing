@@ -1,7 +1,7 @@
 import { type FormEvent, useState } from 'react'
-import { MessageCircle, Send } from 'lucide-react'
+import { Mail, MessageCircle, Send } from 'lucide-react'
 import { submitNetlifyForm } from '../../core/contact-form.service'
-import { site, whatsappHref } from '../../data/site'
+import { openEmail, openWhatsapp } from '../../data/site'
 import type { ContactFormFields } from '../../types/contact-form'
 import { Button } from '../ui/Button'
 import { GlassCard } from '../ui/GlassCard'
@@ -39,13 +39,18 @@ export function Contact() {
           />
 
           <div className="flex flex-col gap-3">
-            <Button href={whatsappHref()} target="_blank" rel="noreferrer">
+            <Button onClick={() => openWhatsapp()}>
               <MessageCircle size={18} />
               Escríbeme por WhatsApp
             </Button>
-            <a href={`mailto:${site.email}`} className="text-sm text-[var(--color-text-muted)] underline">
-              {site.email}
-            </a>
+            <button
+              type="button"
+              onClick={() => openEmail()}
+              className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] underline"
+            >
+              <Mail size={16} />
+              Escríbeme por correo
+            </button>
           </div>
         </Reveal>
 

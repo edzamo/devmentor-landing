@@ -1,5 +1,5 @@
 import { MessageCircle } from 'lucide-react'
-import { site, whatsappHref } from '../../data/site'
+import { openWhatsapp, site } from '../../data/site'
 
 export function Footer() {
   return (
@@ -14,15 +14,24 @@ export function Footer() {
           </p>
         </div>
 
-        <a
-          href={whatsappHref()}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-emerald)]"
-        >
-          <MessageCircle size={16} />
-          Escríbeme por WhatsApp
-        </a>
+        <div className="flex items-center gap-6">
+          <a
+            href={site.portfolioUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-emerald)]"
+          >
+            Ver portafolio
+          </a>
+          <button
+            type="button"
+            onClick={() => openWhatsapp()}
+            className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-emerald)]"
+          >
+            <MessageCircle size={16} />
+            Escríbeme por WhatsApp
+          </button>
+        </div>
       </div>
     </footer>
   )
